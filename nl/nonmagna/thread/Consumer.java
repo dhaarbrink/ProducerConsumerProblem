@@ -19,7 +19,7 @@ public class Consumer implements Runnable {
             System.out.println("Consumer result: " + result);
 
             try {
-                Thread.sleep(new Random().nextInt(5) * 1000);
+                Thread.sleep(new Random().nextInt(10) * 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

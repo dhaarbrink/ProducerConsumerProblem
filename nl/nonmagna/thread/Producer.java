@@ -1,6 +1,6 @@
 package nl.nonmagna.thread;
 
-import nl.nonmagna.SynchronizedBoundedBuffer;
+import nl.nonmagna.buffer.SynchronizedBuffer;
 
 import java.util.Random;
 import java.util.UUID;
@@ -8,9 +8,9 @@ import java.util.UUID;
 import static java.lang.Thread.sleep;
 
 public class Producer implements Runnable {
-    private SynchronizedBoundedBuffer<String> buffer;
+    private SynchronizedBuffer<String> buffer;
 
-    public Producer(SynchronizedBoundedBuffer<String> buffer) {
+    public Producer(SynchronizedBuffer<String> buffer) {
         this.buffer = buffer;
     }
 

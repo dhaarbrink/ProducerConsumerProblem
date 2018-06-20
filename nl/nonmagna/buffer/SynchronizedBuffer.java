@@ -1,11 +1,11 @@
-package nl.nonmagna;
+package nl.nonmagna.buffer;
 
 import nl.nonmagna.exception.BufferFullException;
 
-public class SynchronizedBoundedBuffer<T> {
-    private BoundedBuffer<T> buffer;
+public class SynchronizedBuffer<T> implements Buffer<T> {
+    private Buffer<T> buffer;
 
-    public SynchronizedBoundedBuffer(BoundedBuffer<T> buffer) {
+    public SynchronizedBuffer(Buffer<T> buffer) {
         this.buffer = buffer;
     }
 
@@ -43,6 +43,10 @@ public class SynchronizedBoundedBuffer<T> {
         System.out.println("Removed, new buffer size: " + buffer.size());
 
         return element;
+    }
+
+    public int size() {
+        return buffer.size();
     }
 
     public String toString() {

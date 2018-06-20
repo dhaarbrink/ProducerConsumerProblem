@@ -1,11 +1,11 @@
-package nl.nonmagna;
+package nl.nonmagna.buffer;
 
 import nl.nonmagna.exception.BufferFullException;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BoundedBuffer<T> {
+public class BoundedBuffer<T> implements Buffer<T> {
     private final int maxBufferSize;
     private List<T> buffer = new ArrayList<T>();
 

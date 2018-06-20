@@ -1,13 +1,13 @@
 package nl.nonmagna.thread;
 
-import nl.nonmagna.SynchronizedBoundedBuffer;
+import nl.nonmagna.buffer.SynchronizedBuffer;
 
 import java.util.Random;
 
 public class Consumer implements Runnable {
-    private SynchronizedBoundedBuffer<String> buffer;
+    private SynchronizedBuffer<String> buffer;
 
-    public Consumer(SynchronizedBoundedBuffer<String> buffer) {
+    public Consumer(SynchronizedBuffer<String> buffer) {
         this.buffer = buffer;
     }
 
